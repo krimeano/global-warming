@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .flags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .flags a {
+            margin: 1em;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .flags a div {
+            width: 12em;
+            height: 9em;
+            outline: 1px solid gray;
+            box-sizing: border-box;
+        }
+
+        .flag-at {
+            border-top: 3em solid red;
+            border-bottom: 3em solid red;
+        }
+
+        .flag-ie {
+            border-left: 4em solid green;
+            border-right: 4em solid orange;
+        }
+
+        #errorMessage {
+            color: red;
+            margin: 1em;
+        }
+    </style>
+</head>
+<body>
+<div id="errorMessage"></div>
+<div class="flags">
+    <a onclick="handleCountrySelected('at')">
+        <div class="flag-at"></div>
+        <span>Austria</span>
+    </a>
+    <a onclick="handleCountrySelected('ie')">
+        <div class="flag-ie"></div>
+        <span>Ireland</span>
+    </a>
+</div>
+<div id="curve_chart" class="chart"></div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
